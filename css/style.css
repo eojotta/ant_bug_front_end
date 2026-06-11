@@ -1,0 +1,23 @@
+:root{
+    --fundo-verde: #659860;
+    --cor-cards-bage: #f7f8f2;
+    --verde-butao: #e2ece4;
+    --houver-verde-escuro:#366b41;
+    --bage-escuro: #E6E3DA; 
+}
+
+header{
+    width: 100%;
+    height: 227px;
+    background-color: var(--cor-cards-bage);
+    display: flex;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    width: 100%;
+}
