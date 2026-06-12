@@ -20,6 +20,10 @@ deste contexto pensamos em cada detalhe visando trazer a melhor experiência pos
 [@eojotta](https://github.com/eojotta)
 
 ---
+## Repositório Principal
+
+[doc](https://github.com/PyetroSouza/pi_ant-bug)
+
 ## Repositório de Back-end
 
 [Back-end](https://github.com/PyetroSouza/ant_bug_back-end.git)
