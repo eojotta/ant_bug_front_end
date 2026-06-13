@@ -5,8 +5,8 @@
     font-family: crossorigin;
 }
 
-ul,li{
+ul, li{
     margin: 0;
     padding: 0;
-    list-style-type: nome;
+    list-style-type: none;
 }

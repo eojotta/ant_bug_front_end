@@ -41,6 +41,13 @@ nav input{
     border-radius: 10px;
 }
 
+/* :focus serve para quando algo está ativado.
+    e o outline: nome; serve para tirar o contorno visual de algo
+*/
+nav input:focus{
+    outline: none;
+}
+
 /* Main */
 
 main{
@@ -50,8 +57,23 @@ main{
 
 /* Carossel - main */
 section{
-    height: 250px;
+    height: 260px;
     width: 100%;
+    overflow: hidden;
+    background-color: var(--verde-butao);
+}
+
+#carrossel{
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.imageProduto{
+    object-fit: cover;
+    height: 260px;
+    padding: 20px;
 }
 
 /* Buttoes - main */
@@ -69,6 +91,7 @@ section{
     border: none;
     border-radius: 213.5px;
     font-size: 30px;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
