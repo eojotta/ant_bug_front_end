@@ -40,3 +40,40 @@ nav input{
     font-size: 25px;
     border-radius: 10px;
 }
+
+/* Main */
+
+main{
+    width: 100%;
+    background-color: var(--fundo-verde);
+}
+
+/* Carossel - main */
+section{
+    height: 250px;
+    width: 100%;
+}
+
+/* Buttoes - main */
+
+.listaButoes{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.bnt-categoria{
+    height: 55px;
+    width: 230px;
+    background-color: var(--cor-cards-bage);
+    border: none;
+    border-radius: 213.5px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.bnt-categoria:hover{
+    background-color: var(--houver-verde-escuro);
+    transition: 0.2s;
+    color: #fafafa;
+}
