@@ -106,26 +106,47 @@ section{
 footer{
     display: flex;
     height: 100%;
+    width: 100%;
     background-color: var(--cor-cards-bage);
-}
-
-.footer{
-    flex-direction: row;
-    width: 60%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    font-size: 20px;
-
+    align-items: center;
+    
+}
+a{
+    text-decoration: none; 
+    color: inherit;
+    padding-right: 70px;
 }
 
-.footer img{
+a p{
+    justify-content: center;
+    display: flex;
+}
+.ant-bug{
     width: 420px;
     height: 165px;
     background-color: rgb(221, 195, 195);
+
 }
 
-.maisInformacao{
+.git{
+    width: 60px; 
+    height: 57px;
+}
+.link-git{
+    background-color: var(--verde-butao);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin-top: 12px;
+    border-radius: 20px;
+}
+
+.link-git:hover{
+    transition: 0.8s;
+    background-color: var(--houver-verde-escuro);
+    color: white;
+    
 }
