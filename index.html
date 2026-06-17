@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./js/app.js" defer></script>
+    
+    <script type="module" src="./js/dropdown.js" defer></script>
     <title>Planeta Vegano</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -27,12 +29,21 @@
         </section>
 
         <div class="listaButoes">
-            <button class="bnt-categoria" id="bnt_alimento">Alimento</button>
+
+            <div class="dropdown">
+
+                <button class="bnt-categoria" id="bnt_alimento">Alimento</button>
+
+                <div id="dropdown_alimento_conteudo" class="dropdown_content">
+                   
+                </div>
+            </div>
             <button class="bnt-categoria" id="bnt_cosmetico">Cosméticos</button>
-            <button class="bnt-categoria" id="bnt_vestuario" >Vestuário</button>
+            <button class="bnt-categoria" id="bnt_vestuario">Vestuário</button>
             <button class="bnt-categoria" id="bnt_acessorio">Acessório</button>
             <button class="bnt-categoria" id="bnt_higienePessoal">Higiene Pessoal</button>
             <button class="bnt-categoria" id="bnt_limpeza">Limpeza</button>
+            
         </div>
     </main>
     <footer>
@@ -40,7 +51,7 @@
 
         <small>&copy;2026 - ANT-BUG - Todos os direitos reservados</small>
 
-        <a href="https://github.com/PyetroSouza/pi_ant-bug">
+        <a href="https://github.com">
             <p>Mais informações</p>
             <p class="link-git">
                 GitHub
