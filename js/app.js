@@ -1,4 +1,5 @@
 'use strict'
+import { criarCards } from "./card.js";
 import { moverCarrossel } from "./carrossel.js";
 export async function buscarDadosApi(){
     try {
@@ -18,4 +19,4 @@ export async function buscarDadosApi(){
 }
 
 moverCarrossel()
-
+criarCards()
