@@ -101,6 +101,13 @@ section{
     color: #fafafa;
 }
 
+/*cards*/
+
+.conteinerCards{
+    width: 562px;
+    height: 730px;
+}
+
 /* Footer */
 
 footer{
@@ -126,7 +133,6 @@ a p{
 .ant-bug{
     width: 420px;
     height: 165px;
-    background-color: rgb(221, 195, 195);
 
 }
 
