@@ -1,9 +1,8 @@
 import { buscarDadosApi } from "./app";
 
-function criarCards(url){
-    const url = buscarDadosApi()
-
-const main = document.getElementById('main')
+ export async function criarCards(){
+    const url = await buscarDadosApi()
+    const main = document.getElementById('main')
 
     const conteiner = document.createElement('div')
     conteiner.className = 'conteinerCards'
@@ -27,6 +26,6 @@ const main = document.getElementById('main')
     subCategoria.textContent = url.status
 
     conteiner.append(titulo,imgProduto,miniInformacao,bntSaibaMais,subCategoria)
-    main.appendChild()
+    main.replaceChild(conteiner)
     return main
 }
