@@ -202,8 +202,9 @@ section{
 }
 
 .tituloSaibaMais{
-    height: 80px;
-    width: 300px;
+    min-height: 80px;
+    min-width: 300px;
+    padding: 30px;
     border-radius: 25px;
     justify-content: center;
     display: flex;
