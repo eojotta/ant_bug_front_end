@@ -1,6 +1,7 @@
 'use strict'
 import { criarCards } from "./card.js";
 import { moverCarrossel } from "./carrossel.js";
+import { dropdown } from "./dropdown.js";
 export async function buscarDadosApi(){
     try {
         const url = `https://api.tvmaze.com/shows`
@@ -20,3 +21,4 @@ export async function buscarDadosApi(){
 
 moverCarrossel()
 criarCards()
+dropdown()

@@ -1,42 +1,49 @@
 import { buscarDadosApi } from "./app.js";
 //card com erro bem grande
-   const conteiner = document.createElement('div')
-   conteiner.id = 'caixa'
+const vitrineSaibaMais = document.createElement('div');
+vitrineSaibaMais.id = 'vitrine-cards';
 
-    const card = function(dadosApi){
+const card = function(dados){
+    vitrineSaibaMais.replaceChildren();
+
+    const conteinerHorizontal = document.createElement('div')    
+    conteinerHorizontal.className = 'conteinerHorizontal'
+
+    const imgSaibaMais = document.createElement('img')
+    imgSaibaMais.className = 'imgSaibaMais'
+    imgSaibaMais.src = dados.image.medium
+
+    const titulo = document.createElement('h2')
+    titulo.className = 'tituloSaibaMais'
+    titulo.textContent = dados.name
+
+    conteinerHorizontal.append(imgSaibaMais,titulo)
+
+    const conteinerInformacao = document.createElement('div')
+    conteinerInformacao.className = 'conteinerInformacao'
+    
+    const subCategoriaInfo = document.createElement('span')
+    subCategoriaInfo.className = 'subCategoriaInfo'
+    subCategoriaInfo.textContent = dados.type
+
+    const descricao = document.createElement('p')
+    descricao.className = "descricao"
+    descricao.textContent = dados.summary
+
+    conteinerInformacao.append(subCategoriaInfo,descricao)
+    vitrineSaibaMais.append(conteinerHorizontal,conteinerInformacao)
         
-        
-        const conteinerHorizontal = document.createElement('div')
-        dadosApi.forEach(itensSaibaMais =>{
-            
-            conteinerHorizontal.className = 'conteinerHorizontal'
+}
 
-            const imgSaibaMais = document.createElement('img')
-            imgSaibaMais.className = 'imgSaibaMais'
-            imgSaibaMais.src = './img/logo_empresa.png'
-
-            const titulo = document.createElement('h2')
-            titulo.className = 'tituloSaibaMais'
-            titulo.textContent = itensSaibaMais.name
-
-            conteinerHorizontal.append(imgSaibaMais,titulo)
-            conteiner.replaceChildren(conteinerHorizontal)    
-        });
-        
-        return conteiner
-        
-    }
-
-
- export async function criarCards(){
+export async function criarCards(){
     const dadosApi = await buscarDadosApi()
     const main = document.getElementById('main')
-    conteiner.replaceChildren()
+
+
 
     dadosApi.forEach(itensCard => {
-        
+        const conteiner = document.createElement('div')
         conteiner.className = 'conteinerCards'
-        
         
         const titulo = document.createElement('h2')
         titulo.className = 'titulo' 
@@ -53,14 +60,14 @@ import { buscarDadosApi } from "./app.js";
         bntSaibaMais.className = 'saibaMais'
         bntSaibaMais.textContent = "Saiba Mais"
         // o onclick = ao clicar
-        bntSaibaMais.onclick =() => card(dadosApi)
+        bntSaibaMais.onclick =() => card(itensCard)
 
         const subCategoria = document.createElement('p')
         subCategoria.textContent = itensCard.status
 
         conteiner.append(titulo,imgProduto,miniInformacao,bntSaibaMais,subCategoria)
-        main.appendChild(conteiner)
+        vitrineSaibaMais.appendChild(conteiner)
     });
 
-
+    main.appendChild(vitrineSaibaMais)
 }
