@@ -13,7 +13,7 @@ const card = function(dados){
     imgSaibaMais.className = 'imgSaibaMais'
     imgSaibaMais.src = dados.image.medium
 
-    const titulo = document.createElement('h2')
+    const titulo = document.createElement('p')
     titulo.className = 'tituloSaibaMais'
     titulo.textContent = dados.name
 
@@ -24,7 +24,7 @@ const card = function(dados){
     
     const subCategoriaInfo = document.createElement('span')
     subCategoriaInfo.className = 'subCategoriaInfo'
-    subCategoriaInfo.textContent = dados.type
+    subCategoriaInfo.textContent = `Sub Categora: ${dados.type}`
 
     const descricao = document.createElement('p')
     descricao.className = "descricao"

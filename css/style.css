@@ -6,6 +6,10 @@
     --bage-escuro: #E6E3DA; 
 }
 
+body{
+    height: 100%;
+}
+
 /* Header */
 
 header{
@@ -152,6 +156,8 @@ section{
     gap: 47px;
     margin: 40px;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
     
 }
 .conteinerCards{
@@ -185,14 +191,45 @@ section{
 .informacaoCard{
     background-color: var(--cor-cards-bage);
     margin: 40px;
-    padding: 30px;
+    padding: 50px;
     border-radius: 25px;
+    /* prender a imagem */
+    background-attachment: fixed;
 }
 
 .conteinerHorizontal{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
     width: 100%;
+    font-size: 25px;
+}
+
+.tituloSaibaMais{
+    height: 80px;
+    width: 300px;
+    border-radius: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: var(--verde-butao);
+    
+}
+
+.conteinerInformacao{
+    display: flex;
+    align-items: center; 
+    padding-top: 20px;
+    justify-content: space-evenly;
+}
+
+.subCategoriaInfo{
+    font-size: 40px;
+}
+
+.descricao{
+    width: 1000px;
 }
 
 
